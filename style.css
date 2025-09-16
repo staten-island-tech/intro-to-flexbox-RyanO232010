@@ -1,0 +1,32 @@
+.title {
+  font-size: 100px;
+  text-align: center;
+}
+
+path {
+  transform-origin: 50% 0%;
+}
+
+
+ .background--custom {
+        background-color: #FFFFFF;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        z-index: -2;
+        top: 0;
+        left: 0;
+      }
+      canvas#canvas {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        transform: rotate(-12deg) scale(2) translateY(-56%);
+        --gradient-color-1: #C6A664; 
+        --gradient-color-2: #3E3E3E; 
+        --gradient-color-3: #355E3B;  
+        --gradient-color-4: #B87C7C;
+        --gradient-speed: 0.000006;
+      }
