@@ -1,32 +1,63 @@
+path {
+  transform-origin: 50% 0%;
+}
+
+.background--custom {
+  background-color: transparent;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+canvas#canvas {
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(3);
+  --gradient-color-1: #c6a664;
+  --gradient-color-2: #3e3e3e;
+  --gradient-color-3: #355e3b;
+  --gradient-color-4: #b87c7c;
+  --gradient-speed: 0.000006;
+}
+
 .title {
   font-size: 100px;
   text-align: center;
 }
 
-path {
-  transform-origin: 50% 0%;
+.cardborder {
+  background-color: #f8f4e3;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  margin: 20vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  flex-wrap: wrap;
 }
 
+.card {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: #a89f91;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 8vw;
+  height: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 
- .background--custom {
-        background-color: #FFFFFF;
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        overflow: hidden;
-        z-index: -2;
-        top: 0;
-        left: 0;
-      }
-      canvas#canvas {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: 60%;
-        transform: rotate(-12deg) scale(2) translateY(-56%);
-        --gradient-color-1: #C6A664; 
-        --gradient-color-2: #3E3E3E; 
-        --gradient-color-3: #355E3B;  
-        --gradient-color-4: #B87C7C;
-        --gradient-speed: 0.000006;
-      }
+}
+.wigs {
+  justify-content: center;
+  width: 125px;
+  height: 150px;
+}
