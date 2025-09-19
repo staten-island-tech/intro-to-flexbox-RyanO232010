@@ -5,7 +5,7 @@ path {
 .background--custom {
   background-color: transparent;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   z-index: -2;
   top: 0;
@@ -24,7 +24,7 @@ canvas#canvas {
 }
 
 .title {
-  font-size: 100px;
+  font-size: 10vw;
   text-align: center;
 }
 
@@ -54,16 +54,29 @@ canvas#canvas {
   border-radius: 10px;
   padding: 20px;
   width: auto;
-  height: 25vw;
+  height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  box-sizing: border-box;
 }
 .wig {
   justify-content: center;
-  width: auto;
-  height: 68%;
+  width: 17vw;
+  max-height: 20vw;
   object-fit: cover;
   margin-bottom: 7px;
+}
+
+.description {
+  display: inline;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.description1 {
+  display: inline;
+  text-align: center;
+  font-size: 10px;
 }
 
 .button {
@@ -74,7 +87,7 @@ canvas#canvas {
   line-height: 20px;
   font-weight: 600;
   border-radius: 8px;
-  padding: 14px 24px;
+
   border: none;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
     -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
@@ -88,16 +101,24 @@ canvas#canvas {
   justify-content: space-around;
 }
 
-.description {
-  text-align: center;
-  font-size: 68%;
+button:hover {
+  background: linear-gradient(
+    to right,
+    rgb(235, 33, 84) 0%,
+    rgb(232, 31, 103) 50%,
+    rgb(220, 7, 110) 100%
+  );
 }
 
 @media screen and (max-width: 200px) {
   #card {
     width: auto;
+    height: auto;
   }
-
+  .wig {
+  max-width: 100%;
+  height: auto;
+  }
   .cardborder {
     flex-direction: column;
     width: auto;
