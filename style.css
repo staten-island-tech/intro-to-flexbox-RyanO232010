@@ -104,9 +104,9 @@ canvas#canvas {
 button:hover {
   background: linear-gradient(
     to right,
-    rgb(235, 33, 84) 0%,
-    rgb(232, 31, 103) 50%,
-    rgb(220, 7, 110) 100%
+    rgb(0,0,0) 0%,
+    rgb(112, 112, 112) 50%,
+    rgb(225, 225, 255 ) 100%
   );
 }
 
