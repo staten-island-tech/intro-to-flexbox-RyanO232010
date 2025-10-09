@@ -1,35 +1,10 @@
-path {
-  transform-origin: 50% 0%;
-}
-
-.background--custom {
-  background-color: transparent;
-  width: 100%;
-  height: auto;
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-}
-canvas#canvas {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  transform: scale(3);
-  --gradient-color-1: #c6a664;
-  --gradient-color-2: #3e3e3e;
-  --gradient-color-3: #355e3b;
-  --gradient-color-4: #b87c7c;
-  --gradient-speed: 0.000006;
-  z-index: -1;
-}
 
 .title {
   font-size: 10vw;
   text-align: center;
 }
 
-.cardborder {
+.container {
   background-color: #f8f4e3;
   border: 2px solid #ccc;
   border-radius: 10px;
