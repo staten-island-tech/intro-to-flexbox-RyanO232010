@@ -1,29 +1,36 @@
-
 .title {
   font-size: 10vw;
   text-align: center;
 }
 
+.name {
+  font-size: 10vw;
+  text-align: center;
+}
+.body {
+  align-items: center;
+}
 .container {
   background-color: #f8f4e3;
   border: 2px solid #ccc;
-  border-radius: 10px;
-  padding: 100px;
-  width: auto;
+  border-radius: 2px;
+  padding: 20px;
+  width: 20vw;
   height: auto;
-  margin: 10vw;
+  margin: 2px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
-  justify-content: center;
-  align-items: start;
+  justify-content: space-evenly;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
 }
 
-#card {
+.card {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-direction: column;
   background-color: #a89f91;
   border: 2px solid #ccc;
@@ -35,28 +42,22 @@
   transition: transform 0.3s ease;
   box-sizing: border-box;
 }
-.wig {
-  justify-content: center;
-  width: 17vw;
-  max-height: 20vw;
+.img {
+  width: 200px;
+  max-height: 300px;
   object-fit: cover;
-  margin-bottom: 7px;
+  margin-bottom: 20px;
 }
 
-.description {
-  display: inline;
+.price {
   text-align: center;
-  font-size: 2vw;
+  font-size: 35px;
+  margin-bottom: 10px;
 }
 
-.description1 {
+.btn {
   display: inline;
-  text-align: center;
-  font-size: 10px;
-}
-
-.button {
-  display: inline-block;
+  justify-content: center;
   outline: none;
   cursor: pointer;
   font-size: 16px;
@@ -80,9 +81,9 @@
 button:hover {
   background: linear-gradient(
     to right,
-    rgb(0,0,0) 0%,
+    rgb(0, 0, 0) 0%,
     rgb(112, 112, 112) 50%,
-    rgb(225, 225, 255 ) 100%
+    rgb(225, 225, 255) 100%
   );
 }
 
@@ -91,9 +92,9 @@ button:hover {
     width: auto;
     height: auto;
   }
-  .wig {
-  max-width: 100%;
-  height: auto;
+  .img {
+    max-width: 100%;
+    height: auto;
   }
   .cardborder {
     flex-direction: column;
