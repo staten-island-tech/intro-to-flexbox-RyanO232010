@@ -1,83 +1,92 @@
-.title {
-  font-size: 10vw;
-  text-align: center;
+
+body {
+  background-color: #f8f4e3;
+  margin: 0;
+  font-family: sans-serif;
 }
 
+
+.title,
 .name {
-  font-size: 10vw;
+  font-size: 10vw; 
   text-align: center;
+  margin: 10px 0;
 }
-.body {
-  align-items: center;
-}
-.container {
-  background-color: #f8f4e3;
-  border: 2px solid #ccc;
-  border-radius: 2px;
-  padding: 20px;
-  width: 50vw;
-  margin: 2px auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+
+
+.filters {
   display: flex;
-  justify-content: space-around;
-  gap: 20px;
-  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
 }
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  width: 90vw;
+  margin: 0 auto;
+  background-color: #f8f4e3;
+  box-sizing: border-box;
+}
+
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #a89f91;
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  width: 300px;
+  max-width: 100%; 
+  height: auto; 
   box-sizing: border-box;
-  width: 10vw;
-  height: auto;
-  margin-top: 5px;
-}
-.img {
-  width: 200px;
-  max-height: 300px;
-  object-fit: cover;
-  margin-bottom: 5px;
 }
 
-.price {
+.img {
+  width: 100%;
+  max-width: 250px; 
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+
+.price,
+.stock {
   text-align: center;
   font-size: 35px;
-  margin-bottom: 10px;
+  margin: 5px 0;
 }
 
+
 .btn {
-  display: inline;
-  justify-content: center;
-  outline: none;
   cursor: pointer;
   font-size: 16px;
-  line-height: 20px;
   font-weight: 600;
   border-radius: 8px;
-
   border: none;
-  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s,
-    -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+  padding: 10px 20px;
+  color: #fff;
   background: linear-gradient(
     to right,
     rgb(230, 30, 77) 0%,
     rgb(227, 28, 95) 50%,
     rgb(215, 4, 102) 100%
   );
-  color: #fff;
-  justify-content: space-around;
+  transition: background 0.2s ease;
 }
 
-button:hover {
+.btn:hover {
   background: linear-gradient(
     to right,
     rgb(0, 0, 0) 0%,
@@ -86,18 +95,42 @@ button:hover {
   );
 }
 
-@media screen and (max-width: 200px) {
-  #card {
-    width: auto;
-    height: auto;
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 80vw;
   }
+
+  .card {
+    width: auto;
+    max-width: 400px;
+  }
+
   .img {
-    max-width: 100%;
-    height: auto;
-    width: 10vw;
+    width: 80%;
   }
-  .cardborder {
-    flex-direction: column;
-    width: auto;
+
+  .price,
+  .stock {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 90vw;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .img {
+    width: 80%;
+  }
+
+  .price,
+  .stock {
+    font-size: 20px;
   }
 }
