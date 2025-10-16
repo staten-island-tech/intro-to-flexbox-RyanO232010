@@ -171,13 +171,3 @@ function inject(card) {
 
 Wig.forEach(inject);
 
-document.querySelectorAll(".filters .btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    let category = "";
-    if (btn.id === "kidsBtn") category = "Kids";
-    else if (btn.id === "maleBtn") category = "Male Adults";
-    else if (btn.id === "femaleBtn") category = "Female Adults";
-
-    displayWigs(Wig.filter(w => w.category === category));
-  });
-});
