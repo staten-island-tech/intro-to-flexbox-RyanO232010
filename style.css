@@ -48,7 +48,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
   max-width: 100%; 
-  height: auto; 
+  height: 700px; 
   box-sizing: border-box;
 }
 

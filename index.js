@@ -151,12 +151,11 @@ const DOMSelectors = {
   inStock: document.querySelector(".stock"),
 };
 
-
 function inject(card) {
   const container = document.querySelector(".container");
   DOMSelectors.container.insertAdjacentHTML(
     "afterbegin",
-    ` <div class="card">
+    `<div class="card" data-title="${card.name}">
       <h1>${card.name}</h1>
       <img class="img" src="${card.img}"/>
       <p class="price">$${card.price}</p>
@@ -169,5 +168,18 @@ function inject(card) {
 
 
 
+function addToCart() {
+  const buttons = document.querySelectorAll(".btn");
+  const btnArray = Array.from(buttons);
+  buttons.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      console.log(event.target.textContent);
+      console.log(event.target.closest(.card));
+    })
+  );
+}
+
+
 Wig.forEach(inject);
+addToCart();
 
