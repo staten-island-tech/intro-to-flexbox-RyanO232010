@@ -46,7 +46,7 @@ const Wig = [
     price: 26.99,
     category: "Male Adults",
     img: "/pictures/fancy.webp",
-    inStock: false,
+    inStock: true,
   },
   {
     name: "Marie Antoinette Wig",
