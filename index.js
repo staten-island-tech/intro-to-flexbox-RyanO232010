@@ -1,4 +1,4 @@
-const Wig = [
+const Wigs = [
   {
     name: "Adult Womens Wig",
     price: 23.99,
@@ -141,6 +141,8 @@ const Wig = [
   },
 ];
 
+const cart = [];
+
 const DOMSelectors = {
   name: document.querySelector(".name"),
   container: document.querySelector(".container"),
@@ -166,20 +168,21 @@ function inject(card) {
   );
 }
 
-
-
 function addToCart() {
   const buttons = document.querySelectorAll(".btn");
   const btnArray = Array.from(buttons);
-  buttons.forEach((btn) =>
+  btnArray.forEach((btn) => {
     btn.addEventListener("click", function (event) {
-      console.log(event.target.textContent);
-      console.log(event.target.closest(.card));
-    })
-  );
+      Wigs.forEach((Wig) => {
+        if (
+          Wig.name === event.target.closest(".card").getAttribute("data-title")
+        )
+          cart.push(Wig);
+      });
+      console.log(cart);
+    });
+  });
 }
 
-
-Wig.forEach(inject);
+Wigs.forEach(inject);
 addToCart();
-
