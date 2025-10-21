@@ -184,5 +184,13 @@ function addToCart() {
   });
 }
 
+function filterByCategory(category) {
+  const display = document.getElementById(".card")
+  display.innerHTML = ""
+  const filterBooks = Wigs.filter((Wig) => Wig.category === category)
+  console.log(filterBooks)
+}
+
+filterByCategory("Male Wigs");
 Wigs.forEach(inject);
 addToCart();
