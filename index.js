@@ -162,6 +162,7 @@ function inject(card) {
       <img class="img" src="${card.img}"/>
       <p class="price">$${card.price}</p>
       <p class="stock">In Stock: ${card.inStock}</p>
+      <h2></h2>
       <button class="btn">Add to Cart</button>
       </div>
 `
@@ -184,13 +185,32 @@ function addToCart() {
   });
 }
 
-function filterByCategory(category) {
-  const display = document.getElementById(".card")
-  display.innerHTML = ""
-  const filterBooks = Wigs.filter((Wig) => Wig.category === category)
-  console.log(filterBooks)
+
+function total(card) {
+  const container = document.querySelector(".container");
+  DOMSelectors.container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="shoppingcart">
+      <h1>Shopping Cart Total</h1>
+      <h1></h1>
+      </div>
+`
+  );
 }
 
-filterByCategory("Male Wigs");
+function filterByCategory(category) {
+  const cards = document.querySelectorAll(".card");
+  cards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-category");
+    if (category === cardCategory) {
+      card.style.display = "";}
+    else {
+        card.style.display = "none";
+      }
+    });
+  }
+
+
+filterByCategory("Male Adults");
 Wigs.forEach(inject);
 addToCart();

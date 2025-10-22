@@ -52,6 +52,22 @@ body {
   box-sizing: border-box;
 }
 
+.shoppingcart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a89f91;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  max-width: 100%; 
+  height: auto; 
+  box-sizing: border-box;
+}
+
 .img {
   width: 100%;
   max-width: 250px; 
