@@ -157,7 +157,7 @@ function inject(card) {
   const container = document.querySelector(".container");
   DOMSelectors.container.insertAdjacentHTML(
     "afterbegin",
-    `<div class="card" data-title="${card.name}">
+    `<div class="card" data-title="${card.name}" data-category="${card.category}">
       <h1>${card.name}</h1>
       <img class="img" src="${card.img}"/>
       <p class="price">$${card.price}</p>
@@ -185,32 +185,29 @@ function addToCart() {
   });
 }
 
-
-function total(card) {
-  const container = document.querySelector(".container");
-  DOMSelectors.container.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="shoppingcart">
-      <h1>Shopping Cart Total</h1>
-      <h1></h1>
-      </div>
-`
-  );
-}
-
 function filterByCategory(category) {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
     const cardCategory = card.getAttribute("data-category");
     if (category === cardCategory) {
-      card.style.display = "";}
-    else {
-        card.style.display = "none";
-      }
-    });
-  }
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
 
+function filterbutton() {
+  const filterbuttons = document.querySelectorAll(".filter")
+  filterbuttons.forEach((button) => {
+    button.addEventListener("click", function(event) {
+      console.log(event.target.textContent());
+      filterbuttons.forEach(btn)
 
-filterByCategory("Male Adults");
+    })
+  })
+}
+
 Wigs.forEach(inject);
 addToCart();
+filterByCategory("Female Adults");

@@ -14,14 +14,7 @@ body {
 }
 
 
-.filters {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-
+.btncard,
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -86,7 +79,8 @@ body {
 }
 
 
-.btn {
+.btn,
+.filter {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -103,7 +97,8 @@ body {
   transition: background 0.2s ease;
 }
 
-.btn:hover {
+.btn:hover,
+.filter:hover {
   background: linear-gradient(
     to right,
     rgb(0, 0, 0) 0%,
