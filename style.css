@@ -80,7 +80,7 @@ body {
 
 
 .btn,
-.filter {
+.filterb {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -98,7 +98,7 @@ body {
 }
 
 .btn:hover,
-.filter:hover {
+.filterb:hover {
   background: linear-gradient(
     to right,
     rgb(0, 0, 0) 0%,

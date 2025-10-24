@@ -143,71 +143,48 @@ const Wigs = [
 
 const cart = [];
 
-const DOMSelectors = {
-  name: document.querySelector(".name"),
-  container: document.querySelector(".container"),
-  card: document.querySelector(".card"),
-  button: document.querySelector(".btn"),
-  price: document.querySelector(".price"),
-  picture: document.querySelector(".img"),
-  inStock: document.querySelector(".stock"),
-};
-
 function inject(card) {
   const container = document.querySelector(".container");
-  DOMSelectors.container.insertAdjacentHTML(
+  container.insertAdjacentHTML(
     "afterbegin",
     `<div class="card" data-title="${card.name}" data-category="${card.category}">
       <h1>${card.name}</h1>
-      <img class="img" src="${card.img}"/>
+      <img class="img" src="${card.img}" alt="${card.name}">
       <p class="price">$${card.price}</p>
       <p class="stock">In Stock: ${card.inStock}</p>
-      <h2></h2>
       <button class="btn">Add to Cart</button>
-      </div>
-`
+    </div>`
   );
 }
 
 function addToCart() {
-  const buttons = document.querySelectorAll(".btn");
-  const btnArray = Array.from(buttons);
-  btnArray.forEach((btn) => {
-    btn.addEventListener("click", function (event) {
-      Wigs.forEach((Wig) => {
-        if (
-          Wig.name === event.target.closest(".card").getAttribute("data-title")
-        )
-          cart.push(Wig);
-      });
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("click", (event) => {
+      const name = event.target.closest(".card").dataset.title;
+      const wig = Wigs.find((w) => w.name === name);
+      if (wig) cart.push(wig);
       console.log(cart);
     });
   });
 }
 
 function filterByCategory(category) {
-  const cards = document.querySelectorAll(".card");
-  cards.forEach((card) => {
-    const cardCategory = card.getAttribute("data-category");
-    if (category === cardCategory) {
-      card.style.display = "";
-    } else {
-      card.style.display = "none";
-    }
+  document.querySelectorAll(".card").forEach((card) => {
+    card.style.display =
+      category === "All" || category ===  ""  "none";
   });
 }
 
 function filterbutton() {
-  const filterbuttons = document.querySelectorAll(".filter")
-  filterbuttons.forEach((button) => {
-    button.addEventListener("click", function(event) {
-      console.log(event.target.textContent());
-      filterbuttons.forEach(btn)
-
-    })
-  })
+  document.querySelectorAll(".filterb").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const category = btn.dataset.category;
+      filterByCategory(category);
+    });
+  });
 }
 
 Wigs.forEach(inject);
 addToCart();
-filterByCategory("Female Adults");
+filterbutton();
+filterByCategory("All");
