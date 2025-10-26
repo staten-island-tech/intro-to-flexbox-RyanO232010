@@ -170,10 +170,16 @@ function addToCart() {
 
 function filterByCategory(category) {
   document.querySelectorAll(".card").forEach((card) => {
-    card.style.display =
-      category === "All" || category ===  ""  "none";
+    const cardCat = card.dataset.category;
+
+    if (category === "All" || cardCat === category) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
   });
 }
+
 
 function filterbutton() {
   document.querySelectorAll(".filterb").forEach((btn) => {
