@@ -163,9 +163,15 @@ function addToCart() {
       const name = event.target.closest(".card").dataset.title;
       const wig = Wigs.find((w) => w.name === name);
       if (wig) cart.push(wig);
-      console.log(cart);
+      renderCartTotal();
     });
   });
+}
+
+function renderCartTotal() {
+  const cartEl = document.querySelector(".cart");
+  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  cartEl.innerHTML = `<h2>Total: $${total.toFixed(2)}</h2>`;
 }
 
 function filterByCategory(category) {
@@ -179,7 +185,6 @@ function filterByCategory(category) {
     }
   });
 }
-
 
 function filterbutton() {
   document.querySelectorAll(".filterb").forEach((btn) => {
