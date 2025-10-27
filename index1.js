@@ -177,7 +177,6 @@ function renderCartTotal() {
 function filterByCategory(category) {
   document.querySelectorAll(".card").forEach((card) => {
     const cardCat = card.dataset.category;
-
     if (category === "All" || cardCat === category) {
       card.style.display = "";
     } else {
